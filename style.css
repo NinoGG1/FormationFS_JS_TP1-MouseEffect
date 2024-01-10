@@ -8,6 +8,29 @@
   font-family: "font-1", Arial;
   box-sizing: border-box;
 }
+.custom-cursor {
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+#small-cursor {
+  width: 10px; /* Petit rond */
+  height: 10px;
+  background-color: #2128bd;
+}
+#medium-cursor {
+  width: 50px; /* Rond moyen */
+  height: 50px;
+  background-color: white;
+  transition: 0.03s;
+}
+#large-cursor {
+  width: 100px; /* Grand rond */
+  height: 100px;
+  background-color: rgb(41, 41, 41);
+  transition: 0.05s;
+}
 li {
   list-style: none;
 }
@@ -16,6 +39,8 @@ a:visited {
   color: white;
   text-decoration: none;
   transition: 0.3s;
+  z-index: 1000;
+  position: relative;
 }
 a:hover {
   font-size: 1.3rem;
@@ -25,6 +50,7 @@ body {
   background: rgb(27, 27, 27);
   color: rgb(246, 246, 246);
   min-height: 100vh;
+  cursor: none;
 }
 nav {
   display: grid;
